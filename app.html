@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>The Hundred: By Kshitij Dalvi</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="/CSS/site.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
+
+<!--favicon-->
+
+<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+<link rel="manifest" href="Images/site.webmanifest">
+
+
+   <!-- Convert this to an external style sheet -->
+   
+</head>
+
+<body class="d-flex flex-column h-100" > <!--flex column assures Footer is the bottom-->
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand cool_navText_race" href="index.html">
+            <img src="/Images/as-logo-white.svg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+          THE 100
+          </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link "href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active "  aria-current="page" href="app.html">App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="code.html">Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  target="_blank" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main class="flex-shrink-0">  <!--Shrink Helps with the footer-->
+      <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2 h-100">
+            <div class="col-lg-8 col-12 order-last order-lg-first">
+                <h5>Enter Values</h5>
+                <form class="row gy-3 gx-3">
+                    <div class="col">
+                        <input id="startValue" type="number" class="form-control" placeholder="Start-Off!" value="0" aria-label="Start Value">
+                    </div>
+                    <div class="col">
+                        <input id="endValue" type="number" class="form-control" placeholder="Finish" value="100" aria-label="End Value">
+                    </div>
+                    <div class="col-12 d-flex justify-content-evenly">
+                        <button type="button" id="btnSubmit" class="btn-dark btn-lg "> Display The Hundred</button>
+                    </div>
+
+                </form>
+
+                <h2 class="mt-5">Results </h2>
+                <div class="table-responsive-sm">
+                    <table class="table table-striped table-sm">
+                        <tbody id="results">
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 order-first order-lg-last">
+                <h1>The Hundred</h1>
+                <h4 class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quisquam vel autem atque et.
+                     Molestiae laborum, repellat quae ex est sint, eligendi hic dicta, tenetur nobis officiis alias aliquid perferendis.
+
+                </h4>
+                <h2 class="mt-5">Instructions</h2>
+                <p> Enter a starting Value. Press the button</p>
+            </div>
+
+        </div>
+      </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light sticky-footer "> 
+        <div class="container-fluid"> 
+            <div class="row row-cols-1 row-cols-md-3 gy-2">
+                <div class="col cool_normal_14 order-last order-md-first "> <div> <span class="text-muted">&copy; 2023</span> Kshitij Dalvi   | kshitijdalvi22@gmail.com</div></div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-md-center order-md-first">
+                    <img src="/Images/ActionScale_Finale-gray.svg" alt="ActionScale" height="32">
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-end ">
+                    <div class="row d-flex align-items-center justify-content-around">
+                    <div class="col-1 m-1 social linkedin" >  <a href="www.linkedin.com/in/kshitij-dalvi-594b90226"><i class="fab fa-linkedin fa-2x"></i> </a></div>
+                    <div class="col-1 m-1 social github"> <a href="www.linkedin.com/in/kshitij-dalvi-594b90226"><i class="fab fa-github fa-2x"></i> </a></div>
+                    <div class="col-1 m-1 social me-5 twitter"> <a href="www.linkedin.com/in/kshitij-dalvi-594b90226"><i class="fab fa-twitter fa-2x"></i> </a></div>
+                </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+           
+    </footer>
+    
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+
+ </script>
+  <script src="/JS/site.js"></script>
+  <script>  document.getElementById("btnSubmit").addEventListener("click", getVal);</script>
+  
+
+ 
+</body>
+
+</html>
