@@ -2,20 +2,20 @@
 //Get the Values from inputs
 //controll
 function getVal() {
-    let startValue = document.getElementById("startValue").value;
-    let endValue = document.getElementById("endValue").value;
+    let fizzValue = document.getElementById("fizzValue").value;
+    let buzzValue = document.getElementById("buzzValue").value;
     
    //str parsed to int
-    startValue=parseInt(startValue);
-    endValue=parseInt(endValue);
+    fizzValue=parseInt(fizzValue);
+    buzzValue=parseInt(buzzValue);
 
    
 
-    if(Number.isInteger(startValue) && Number.isInteger(endValue))
+    if(Number.isInteger(fizzValue) && Number.isInteger(buzzValue))
     {
-         let num=generateNum(startValue,endValue);
+         let fbdata=FizzBuzzB(fizzValue,buzzValue);
              //Display Func
-                 displayNum(num);
+                 displayNum(fbdata);
 
     }
 
@@ -27,39 +27,86 @@ function getVal() {
 }
 
 //logic
-function generateNum(start,end)
-{
-  let num=[];
 
-for(let index=start; index<=end; index++){
-    //index is not a keywiord
-     num.push(index);
- }
-  return num;
+
+function FizzBuzzB(fizzValue,buzzValue)
+{
+    let returnArray=[];
+    let Fizz=false;
+   let Buzz=false;
+    for (i=1;i<=100;i++) {
+
+        Fizz = i%fizzValue==0;
+        Buzz= i%buzzValue==0;
+
+    switch(true){
+        case Fizz && Buzz:{
+            returnArray.push('FizzBuzz');
+            break;
+        }
+
+        case Fizz:{
+            returnArray.push('Fizz');
+            break;
+
+        }
+
+        case Buzz:{
+            returnArray.push('Buzz');
+            break;
+
+        }
+
+        default:{
+            returnArray.push(i);
+        }
+    }
+    }
+
+
+
+    return returnArray;
+
 }
 
 
 //display nums
-function displayNum(num){
+function displayNum(fbdata){
     
- let templateRows=[];
-    for(let i=0; i<num.length; i++){
+ 
+
+        //get the table body element from the page
+        let tableBody = document.getElementById("results");
+    
+        //get the row from the template
+        let templateRow = document.getElementById("fbTemplate");
+    
+        //clear table first
+        tableBody.innerHTML = "";
+    
+        for (let i = 0; i < fbdata.length; i += 5) {
+            const tableRow = document.importNode(templateRow.content, true);
+            //grab only the columns in the template
+            rowCols = tableRow.querySelectorAll("td");
+    
+            rowCols[0].classList.add(fbdata[i]);
+            rowCols[0].textContent = fbdata[i];
         
-        let numbers = num[i];
-        let className ="even";
-
-        if (numbers %2 ==0)
-        {
-            className="even";
-        }
-
-        else{
-            className="odd";
-        }
-        templateRows += `<tr><td class="${className}"> ${numbers} </td></tr>`;
-      
-    }
+            rowCols[1].classList.add(fbdata[i+ 1]);
+            rowCols[1].textContent = fbdata[i + 1];
+           
+            rowCols[2].classList.add(fbdata[i+2]);
+            rowCols[2].textContent = fbdata[i + 2];
+           
+            rowCols[3].classList.add(fbdata[i+3]);
+            rowCols[3].textContent = fbdata[i + 3];
+           
+            rowCols[4].classList.add(fbdata[i+4]);
+            rowCols[4].textContent = fbdata[i + 4];
     
-    document.getElementById("results").innerHTML=templateRows;
+            tableBody.appendChild(tableRow);
+        }
+    
+  
 }
 
